@@ -1,0 +1,64 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  createdAt DateTime @default(now())
+}
+
+model Donation {
+  id        String   @id @default(cuid())
+  amount    Float
+  currency  String   @default("USD")
+  recurring Boolean  @default(false)
+  name      String
+  email     String
+  phone     String   @default("")
+  status    String   @default("pending")
+  reference String   @unique
+  createdAt DateTime @default(now())
+}
+
+model Subscriber {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+}
+
+model Contact {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String   @default("")
+  message   String
+  createdAt DateTime @default(now())
+}
+
+model Volunteer {
+  id          String   @id @default(cuid())
+  name        String
+  email       String
+  phone       String   @default("")
+  interest    String   @default("")
+  message     String   @default("")
+  createdAt   DateTime @default(now())
+}
+
+model Partner {
+  id          String   @id @default(cuid())
+  name        String
+  organization String  @default("")
+  email       String
+  phone       String   @default("")
+  message     String   @default("")
+  createdAt   DateTime @default(now())
+}
