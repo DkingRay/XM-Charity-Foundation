@@ -16,6 +16,7 @@ import {
   Sun,
   Moon,
 } from 'lucide-react'
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import { useState, useEffect } from 'react'
@@ -55,16 +56,15 @@ export default function AdminLayout({
   const sidebar = (
     <div className="flex h-full flex-col bg-card">
       <div className="flex h-16 items-center gap-2.5 border-b border-border px-6">
-        <Link href="/admin" className="flex items-center gap-2.5 font-heading font-bold text-lg">
-          <span className="flex size-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary/70 text-primary-foreground text-sm font-bold shadow-sm">
-            XM
-          </span>
-          <div className="leading-tight">
-            <span className="block">Admin</span>
-            <span className="block text-[0.65rem] font-medium tracking-widest text-muted-foreground uppercase">
-              Dashboard
-            </span>
-          </div>
+        <Link href="/admin" className="flex items-center gap-3 px-1">
+          <Image
+            src="/logo-transparent.png"
+            alt="XM Charity Foundation"
+            width={120}
+            height={34}
+            className="h-8 w-auto"
+            priority
+          />
         </Link>
       </div>
 

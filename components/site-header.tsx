@@ -3,7 +3,8 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import { Menu, X, Heart } from 'lucide-react'
+import Image from 'next/image'
+import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import { NAV_LINKS } from '@/lib/site-data'
@@ -39,25 +40,16 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-20 lg:px-8">
         <Link
           href="/"
-          className={cn(
-            'flex items-center gap-2.5 font-heading text-lg font-extrabold tracking-tight transition-colors',
-            transparent ? 'text-white' : 'text-foreground',
-          )}
+          className="flex items-center gap-3"
         >
-          <span className="flex size-9 items-center justify-center rounded-xl bg-primary text-primary-foreground">
-            <Heart className="size-5" fill="currentColor" />
-          </span>
-          <span className="leading-none">
-            XM Charity
-            <span
-              className={cn(
-                'block text-[0.7rem] font-medium tracking-[0.18em] uppercase',
-                transparent ? 'text-white/70' : 'text-muted-foreground',
-              )}
-            >
-              Foundation
-            </span>
-          </span>
+          <Image
+            src="/logo-transparent.png"
+            alt="XM Charity Foundation"
+            width={140}
+            height={40}
+            className="h-9 w-auto"
+            priority
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">

@@ -2,7 +2,8 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { Heart, Eye, EyeOff, LogIn } from 'lucide-react'
+import Image from 'next/image'
+import { Eye, EyeOff, LogIn } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -44,15 +45,17 @@ export default function AdminLoginPage() {
       <div className="w-full max-w-sm">
         <div className="rounded-2xl border border-border bg-card p-8 shadow-sm">
           <div className="text-center">
-            <span className="mx-auto flex size-14 items-center justify-center rounded-xl bg-primary/10 text-primary">
-              <Heart className="size-7" fill="currentColor" />
-            </span>
+            <Image
+              src="/logo-transparent.png"
+              alt="XM Charity Foundation"
+              width={160}
+              height={45}
+              className="mx-auto h-10 w-auto"
+              priority
+            />
             <h1 className="mt-5 font-heading text-xl font-bold">
               Admin Login
             </h1>
-            <p className="mt-1 text-sm text-muted-foreground">
-              XM Charity Foundation
-            </p>
           </div>
 
           <form onSubmit={handleSubmit} className="mt-8 space-y-4">
