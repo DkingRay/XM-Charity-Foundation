@@ -17,7 +17,7 @@ export function MediaGallery({ items }: MediaGalleryProps) {
         className="flex gap-4"
         animate={{ x: ['0%', '-33.333%'] }}
         transition={{
-          duration: items.length * 4,
+          duration: items.length * 1.5,
           repeat: Infinity,
           ease: 'linear',
         }}
