@@ -31,7 +31,7 @@ const PROGRAMS = [
   {
     slug: 'education',
     title: 'School Renovation',
-    image: IMG(ALL_IMAGES[0]),
+    image: IMG(ALL_IMAGES[4]),
     summary: 'Rebuilding and renovating public schools across Nigeria — restoring classrooms, toilets, and providing furniture and learning materials.',
     description: 'Our flagship program focuses on renovating dilapidated public schools across Northern Nigeria and beyond. We rebuild classroom blocks, restore toilet facilities, provide new desks and chairs, and distribute learning materials. Every child deserves a safe place to learn and dream, and we refuse to look away.',
     metrics: [{ value: '15+', label: 'Schools renovated' }, { value: '50', label: 'Goal for 2026' }, { value: '8,000+', label: 'Students impacted' }],
@@ -58,7 +58,7 @@ const PROGRAMS = [
   {
     slug: 'youth-empowerment',
     title: 'Youth & Education',
-    image: IMG(ALL_IMAGES[6]),
+    image: IMG(ALL_IMAGES[1]),
     summary: 'Scholarships, student financial support, and integration of modern skills like finance and technology into education.',
     description: 'We invest in the next generation through student financial support, scholarships, and partnerships with university student unions. Modern education concepts like finance and technology are integrated into learning materials, preparing young Nigerians for the future.',
     metrics: [{ value: '500+', label: 'Students supported' }, { value: '5', label: 'University partnerships' }, { value: '1,000+', label: 'Learning materials' }],

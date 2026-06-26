@@ -81,7 +81,7 @@ export const PROGRAMS: Program[] = [
     slug: 'education',
     title: 'School Renovation',
     icon: Building,
-    image: IMG('727588697_122286498308018099_2441904961173424883_n.jpg'),
+    image: IMG('724818017_122285697002018099_8405143684719318262_n.jpg'),
     summary:
       'Rebuilding and renovating public schools across Nigeria — restoring classrooms, toilets, and providing furniture and learning materials.',
     description:
@@ -144,7 +144,7 @@ export const PROGRAMS: Program[] = [
     slug: 'youth-empowerment',
     title: 'Youth & Education',
     icon: GraduationCap,
-    image: IMG('723109644_122285176976018099_4112867470274838597_n.jpg'),
+    image: IMG('727550799_122286498254018099_2205527912629372701_n.jpg'),
     summary:
       'Scholarships, student financial support, and integration of modern skills like finance and technology into education.',
     description:
