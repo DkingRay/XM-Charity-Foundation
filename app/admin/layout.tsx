@@ -13,10 +13,13 @@ import {
   ChevronLeft,
   Menu,
   BarChart3,
+  Sun,
+  Moon,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useTheme } from 'next-themes'
 
 const NAV_ITEMS = [
   { label: 'Dashboard', href: '/admin', icon: LayoutDashboard },
@@ -35,6 +38,10 @@ export default function AdminLayout({
   const pathname = usePathname()
   const router = useRouter()
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => setMounted(true), [])
 
   if (pathname === '/admin/login') {
     return <>{children}</>
@@ -146,6 +153,16 @@ export default function AdminLayout({
           </div>
           <div className="flex-1" />
           <div className="flex items-center gap-2">
+            {mounted && (
+              <button
+                type="button"
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className="inline-flex size-9 items-center justify-center rounded-lg hover:bg-muted transition-colors"
+                aria-label="Toggle dark mode"
+              >
+                {theme === 'dark' ? <Sun className="size-4" /> : <Moon className="size-4" />}
+              </button>
+            )}
             <span className="hidden sm:inline text-sm text-muted-foreground">Admin Panel</span>
             <span className="flex size-8 items-center justify-center rounded-full bg-primary/10 text-primary text-xs font-bold">
               A

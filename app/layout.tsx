@@ -5,6 +5,7 @@ import './globals.css'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { LayoutGuard } from '@/components/layout-guard'
+import { ThemeProvider } from '@/components/theme-provider'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
 const geistMono = Geist_Mono({
@@ -65,12 +66,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} ${sora.variable} bg-background`}
     >
       <body className="font-sans antialiased">
-        <LayoutGuard><SiteHeader /></LayoutGuard>
-        <main>{children}</main>
-        <LayoutGuard><SiteFooter /></LayoutGuard>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+          <LayoutGuard><SiteHeader /></LayoutGuard>
+          <main>{children}</main>
+          <LayoutGuard><SiteFooter /></LayoutGuard>
+        </ThemeProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
