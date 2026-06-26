@@ -50,7 +50,7 @@ export default function AdminLoginPage() {
               alt="XM Charity Foundation"
               width={160}
               height={45}
-              className="mx-auto h-10 w-auto invert"
+              className="mx-auto h-12 w-auto invert"
               priority
             />
             <h1 className="mt-5 font-heading text-xl font-bold">
