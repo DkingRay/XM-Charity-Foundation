@@ -38,16 +38,13 @@ export function SiteHeader() {
       )}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-20 lg:px-8">
-        <Link
-          href="/"
-          className="flex items-center gap-3"
-        >
+        <Link href="/" className="flex items-center gap-3">
           <Image
             src="/logo.png"
             alt="XM Charity Foundation"
             width={140}
             height={40}
-            className="h-9 w-auto"
+            className="h-9 w-auto invert"
             priority
           />
         </Link>

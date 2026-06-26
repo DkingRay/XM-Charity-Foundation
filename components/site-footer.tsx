@@ -62,7 +62,7 @@ export function SiteFooter() {
                 alt="XM Charity Foundation"
                 width={160}
                 height={45}
-                className="h-10 w-auto"
+                className="h-10 w-auto invert"
               />
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-sidebar-foreground/70">
