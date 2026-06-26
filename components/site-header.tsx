@@ -44,7 +44,7 @@ export function SiteHeader() {
             alt="XM Charity Foundation"
             width={140}
             height={40}
-            className="h-11 w-auto invert"
+            className="h-11 w-auto"
             priority
           />
         </Link>

@@ -62,7 +62,7 @@ export default function AdminLayout({
             alt="XM Charity Foundation"
             width={120}
             height={34}
-            className="h-10 w-auto invert"
+            className="h-10 w-auto"
             priority
           />
         </Link>
