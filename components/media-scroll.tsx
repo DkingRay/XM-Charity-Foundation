@@ -9,7 +9,7 @@ type MediaScrollProps = {
 }
 
 export function MediaScroll({ items }: MediaScrollProps) {
-  const speed = items.length * 1.5
+  const speed = items.length * 0.25
   const duplicated = [...items, ...items, ...items]
 
   return (
