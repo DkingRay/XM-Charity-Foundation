@@ -20,7 +20,6 @@ import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import { useState, useEffect } from 'react'
-import { useTheme } from 'next-themes'
 
 const NAV_ITEMS = [
   { label: 'Dashboard', href: '/admin', icon: LayoutDashboard },
@@ -39,10 +38,27 @@ export default function AdminLayout({
   const pathname = usePathname()
   const router = useRouter()
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
+  const [dark, setDark] = useState(false)
 
-  useEffect(() => setMounted(true), [])
+  useEffect(() => {
+    const stored = localStorage.getItem('admin-theme')
+    if (stored === 'dark') {
+      setDark(true)
+      document.documentElement.classList.add('dark')
+    }
+  }, [])
+
+  const toggleTheme = () => {
+    const next = !dark
+    setDark(next)
+    if (next) {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('admin-theme', 'dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('admin-theme', 'light')
+    }
+  }
 
   if (pathname === '/admin/login') {
     return <>{children}</>
@@ -153,16 +169,14 @@ export default function AdminLayout({
           </div>
           <div className="flex-1" />
           <div className="flex items-center gap-2">
-            {mounted && (
-              <button
-                type="button"
-                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                className="inline-flex size-9 items-center justify-center rounded-lg hover:bg-muted transition-colors"
-                aria-label="Toggle dark mode"
-              >
-                {theme === 'dark' ? <Sun className="size-4" /> : <Moon className="size-4" />}
-              </button>
-            )}
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="inline-flex size-9 items-center justify-center rounded-lg hover:bg-muted transition-colors"
+              aria-label="Toggle dark mode"
+            >
+              {dark ? <Sun className="size-4" /> : <Moon className="size-4" />}
+            </button>
             <span className="hidden sm:inline text-sm text-muted-foreground">Admin Panel</span>
             <span className="flex size-8 items-center justify-center rounded-full bg-primary/10 text-primary text-xs font-bold">
               A
