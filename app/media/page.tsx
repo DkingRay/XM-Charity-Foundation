@@ -22,8 +22,8 @@ export default function MediaPage() {
         description="Real photos, videos, and reels capturing the impact of our work across communities."
       />
 
-      <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-7xl">
+      <section className="py-16 lg:py-24">
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
           <MediaGallery items={MEDIA_ITEMS} />
 
           <Reveal className="mt-16 text-center">
