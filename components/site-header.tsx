@@ -43,7 +43,7 @@ export function SiteHeader() {
           className="flex items-center gap-3"
         >
           <Image
-            src="/logo-transparent.png"
+            src="/logo.png"
             alt="XM Charity Foundation"
             width={140}
             height={40}

@@ -46,7 +46,7 @@ export default function AdminLoginPage() {
         <div className="rounded-2xl border border-border bg-card p-8 shadow-sm">
           <div className="text-center">
             <Image
-              src="/logo-transparent.png"
+              src="/logo.png"
               alt="XM Charity Foundation"
               width={160}
               height={45}

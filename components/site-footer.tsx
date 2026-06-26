@@ -58,7 +58,7 @@ export function SiteFooter() {
           <div className="lg:col-span-4">
             <Link href="/" className="inline-block">
               <Image
-                src="/logo-transparent.png"
+                src="/logo.png"
                 alt="XM Charity Foundation"
                 width={160}
                 height={45}

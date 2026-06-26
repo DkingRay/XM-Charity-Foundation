@@ -58,7 +58,7 @@ export default function AdminLayout({
       <div className="flex h-16 items-center gap-2.5 border-b border-border px-6">
         <Link href="/admin" className="flex items-center gap-3 px-1">
           <Image
-            src="/logo-transparent.png"
+            src="/logo.png"
             alt="XM Charity Foundation"
             width={120}
             height={34}
