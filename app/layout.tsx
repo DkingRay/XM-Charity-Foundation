@@ -66,7 +66,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${sora.variable} bg-background`}
     >
       <body className="font-sans antialiased">
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
           <LayoutGuard><SiteHeader /></LayoutGuard>
           <main>{children}</main>
           <LayoutGuard><SiteFooter /></LayoutGuard>
