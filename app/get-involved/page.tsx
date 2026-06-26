@@ -143,7 +143,7 @@ export default function GetInvolvedPage() {
                     <div>
                       <Label htmlFor="v-area">Area of Interest</Label>
                       <Input
-                        id="v-area" placeholder="e.g. Education, Healthcare"
+                        id="v-area" placeholder="e.g. Education, Outreach"
                         value={volunteerForm.interest}
                         onChange={(e) => setVolunteerForm({ ...volunteerForm, interest: e.target.value })}
                         className="mt-1.5"

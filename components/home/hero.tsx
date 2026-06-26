@@ -74,7 +74,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-white/85 lg:text-xl">
-            A self-funded Nigerian non-profit empowering marginalized communities through education, school renovations, healthcare, and outreach.
+            A self-funded Nigerian non-profit empowering marginalized communities through school renovations, education, and community outreach.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">

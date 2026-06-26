@@ -65,7 +65,7 @@ export default function EventsPage() {
       <PageHero
         eyebrow="Events"
         title="Join us in making a difference"
-        description="From medical missions to fundraising galas — see how you can be part of our upcoming events."
+        description="From school renovation commissioning to community outreaches — see how you can be part of our upcoming events."
       />
 
       <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">

@@ -10,7 +10,7 @@ import { MEDIA_ITEMS, CONTACT } from '@/lib/site-data'
 export const metadata: Metadata = {
   title: 'Media Center',
   description:
-    'Explore photos, videos, and reels from XM Charity Foundation outreaches, medical missions, education programs, and events.',
+    'Explore photos, videos, and reels from XM Charity Foundation school renovations, outreaches, education programs, and events.',
 }
 
 export default function MediaPage() {

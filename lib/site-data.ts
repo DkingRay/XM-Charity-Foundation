@@ -1,7 +1,6 @@
 import {
   HeartHandshake,
   GraduationCap,
-  Stethoscope,
   Users,
   HandHeart,
   Sprout,
@@ -10,7 +9,6 @@ import {
   Award,
   Leaf,
   Building,
-  BookOpen,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
@@ -103,27 +101,6 @@ export const PROGRAMS: Program[] = [
       'Provide new desks, chairs, and learning materials',
       'Restore toilet and sanitation facilities',
       'Create safe, dignified learning environments for children',
-    ],
-  },
-  {
-    slug: 'healthcare',
-    title: 'Healthcare',
-    icon: Stethoscope,
-    image: IMG('725641030_122286111038018099_2129789106909836960_n.jpg'),
-    summary:
-      'Free medical missions and health outreaches bringing essential care to underserved communities. Expanding into healthcare in 2027.',
-    description:
-      'Through free medical missions, health screenings, and treatment outreaches, we bring quality healthcare to communities with limited access to medical services. In 2027, Insha Allah, we will expand our impact into the healthcare sector with a broader, sustained healthcare program.',
-    metrics: [
-      { value: '5,000+', label: 'Patients treated' },
-      { value: '10+', label: 'Medical outreaches' },
-      { value: '2027', label: 'Full healthcare launch' },
-    ],
-    objectives: [
-      'Organize free medical missions in underserved communities',
-      'Provide health screenings and essential treatment',
-      'Distribute medications and health supplies',
-      'Expand into a dedicated healthcare program in 2027',
     ],
   },
   {
@@ -253,9 +230,9 @@ export const TIMELINE = [
   },
   {
     year: '2026 – 2027',
-    title: '50-School Goal & Healthcare Expansion',
+    title: '50-School Goal & Beyond',
     description:
-      'The foundation aims to complete 50 school renovations in 2026 and announces plans to expand into the healthcare sector in 2027.',
+      'The foundation aims to complete 50 school renovations in 2026, continuing to expand its impact across Nigeria.',
   },
 ]
 
@@ -293,7 +270,7 @@ export const STORIES: Story[] = [
 export type MediaItem = {
   id: number
   image: string
-  category: 'School Renovation' | 'Education' | 'Outreach' | 'Medical Missions' | 'Events'
+  category: 'School Renovation' | 'Education' | 'Outreach' | 'Events'
   type: 'photo' | 'video' | 'reel'
   title: string
   span?: 'tall' | 'wide'
@@ -325,7 +302,7 @@ export const MEDIA_ITEMS: MediaItem[] = [
   { id: 1, image: IMG(ALL_IMAGES[0]), category: 'School Renovation', type: 'photo', title: 'Newly renovated classroom blocks in Bauchi', span: 'wide' },
   { id: 2, image: IMG(ALL_IMAGES[1]), category: 'Education', type: 'photo', title: 'Students receiving learning materials', span: 'tall' },
   { id: 3, image: IMG(ALL_IMAGES[2]), category: 'Outreach', type: 'photo', title: 'Foundation team during community outreach' },
-  { id: 4, image: IMG(ALL_IMAGES[3]), category: 'Medical Missions', type: 'photo', title: 'Medical outreach team in action', span: 'tall' },
+  { id: 4, image: IMG(ALL_IMAGES[3]), category: 'Education', type: 'photo', title: 'Community learning materials distribution', span: 'tall' },
   { id: 5, image: IMG(ALL_IMAGES[4]), category: 'School Renovation', type: 'photo', title: 'School renovation project — before and after', span: 'wide' },
   { id: 6, image: IMG(ALL_IMAGES[5]), category: 'Outreach', type: 'photo', title: 'Food distribution to families in need' },
   { id: 7, image: IMG(ALL_IMAGES[6]), category: 'Education', type: 'photo', title: 'Children with new school supplies' },
@@ -339,9 +316,8 @@ export const MEDIA_ITEMS: MediaItem[] = [
 export const MEDIA_CATEGORIES = [
   'All',
   'School Renovation',
-  'Outreach',
   'Education',
-  'Medical Missions',
+  'Outreach',
   'Events',
 ] as const
 

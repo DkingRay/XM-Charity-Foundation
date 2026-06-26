@@ -10,7 +10,7 @@ import { PROGRAMS } from '@/lib/site-data'
 export const metadata: Metadata = {
   title: 'Our Programs',
   description:
-    'Explore XM Charity Foundation programs across education, healthcare, community outreach, humanitarian support, and youth empowerment.',
+    'Explore XM Charity Foundation programs across school renovation, community outreach, humanitarian support, and youth empowerment.',
 }
 
 export default function ProgramsPage() {

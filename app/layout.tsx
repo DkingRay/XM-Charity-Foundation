@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     template: '%s | XM Charity Foundation',
   },
   description:
-    'XM Charity Foundation empowers communities through compassion, outreach, healthcare, education, and sustainable development. Donate, volunteer, or partner with us today.',
+    'XM Charity Foundation empowers communities through compassion, outreach, education, and sustainable development. Volunteer or partner with us today.',
   generator: 'v0.app',
   keywords: [
     'charity',
     'nonprofit',
     'foundation',
     'community outreach',
-    'healthcare',
+
     'education',
     'humanitarian aid',
     'volunteer',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'XM Charity Foundation — Transforming Lives, Building Hope',
     description:
-      'Empowering communities through compassion, outreach, healthcare, education, and sustainable development.',
+      'Empowering communities through compassion, outreach, education, and sustainable development.',
     type: 'website',
   },
   icons: {

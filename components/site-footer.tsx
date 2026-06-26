@@ -15,7 +15,7 @@ import { NAV_LINKS, CONTACT } from '@/lib/site-data'
 
 const programLinks = [
   { label: 'Education', href: '/programs/education' },
-  { label: 'Healthcare', href: '/programs/healthcare' },
+  { label: 'Youth & Education', href: '/programs/youth-empowerment' },
   { label: 'Community Outreach', href: '/programs/community-outreach' },
   { label: 'Humanitarian Support', href: '/programs/humanitarian-support' },
   { label: 'Youth Empowerment', href: '/programs/youth-empowerment' },
@@ -66,7 +66,7 @@ export function SiteFooter() {
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-sidebar-foreground/70">
               Transforming lives and building hope through compassion, outreach,
-              healthcare, education, and sustainable community development.
+               education, and sustainable community development.
             </p>
             <div className="mt-6 flex gap-2">
               {socials.map((s) => (

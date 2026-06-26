@@ -19,7 +19,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="Who We Are"
         title="Building Bridges and Changing Lives"
-        description="A Nigerian non-profit foundation dedicated to empowering marginalized communities through education, healthcare, and economic opportunities."
+        description="A Nigerian non-profit foundation dedicated to empowering marginalized communities through education, school renovations, and economic opportunities."
       />
 
       {/* Founder Section */}
@@ -51,7 +51,7 @@ export default function AboutPage() {
                 Ahmed Yusuf Saifullah is a Nigerian financial market analyst, cryptocurrency trader, and philanthropist. Born July 7, 1997, in Bauchi State, he rose from humble beginnings to become one of Africa&apos;s most influential traders, founding XM Trading Academy.
               </p>
               <p>
-                Driven by a deep sense of moral duty and gratitude, Ahmed established the XM Charity Foundation as a self-funded initiative — operating entirely without external or government funding. His mission: to renovate 50 schools across Nigeria in 2026 and expand into healthcare in 2027.
+                Driven by a deep sense of moral duty and gratitude, Ahmed established the XM Charity Foundation as a self-funded initiative — operating entirely without external or government funding. His mission: to renovate 50 schools across Nigeria in 2026.
               </p>
               <p>
                 &ldquo;A small token, a meaningful impact.&rdquo; This philosophy guides everything the foundation does, from rebuilding classroom blocks to distributing learning materials and supporting communities.
@@ -85,12 +85,12 @@ export default function AboutPage() {
             {
               icon: Target,
               title: 'Our Mission',
-              text: 'To empower vulnerable communities across Nigeria through sustainable programs in education, healthcare, and humanitarian support — delivered with compassion, integrity, and full accountability.',
+              text: 'To empower vulnerable communities across Nigeria through sustainable programs in education, school renovation, and humanitarian support — delivered with compassion, integrity, and full accountability.',
             },
             {
               icon: Eye,
               title: 'Our Vision',
-              text: 'A Nigeria where every child has access to quality education, every community has access to healthcare, and every person has the opportunity to build a dignified future.',
+              text: 'A Nigeria where every child has access to quality education in a safe learning environment, and every person has the opportunity to build a dignified future.',
             },
           ].map((item, i) => (
             <Reveal key={item.title} delay={i * 0.1}>
