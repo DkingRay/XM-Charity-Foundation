@@ -41,11 +41,6 @@ const IMG = (filename: string) => `/images/${filename}`
 
 export const HERO_SLIDES = [
   {
-    image: IMG('727588697_122286498308018099_2441904961173424883_n.jpg'),
-    alt: 'School renovation project — newly rebuilt classroom blocks at a school in Bauchi',
-    tag: 'School Renovation',
-  },
-  {
     image: IMG('727550799_122286498254018099_2205527912629372701_n.jpg'),
     alt: 'Students receiving new learning materials and school supplies from the foundation',
     tag: 'Education Support',
