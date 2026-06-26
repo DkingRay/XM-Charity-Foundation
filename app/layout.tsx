@@ -5,6 +5,7 @@ import './globals.css'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { LayoutGuard } from '@/components/layout-guard'
+import { BackToTop } from '@/components/back-to-top'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
 const geistMono = Geist_Mono({
@@ -67,6 +68,7 @@ export default function RootLayout({
         <LayoutGuard><SiteHeader /></LayoutGuard>
         <main>{children}</main>
         <LayoutGuard><SiteFooter /></LayoutGuard>
+        <LayoutGuard><BackToTop /></LayoutGuard>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
