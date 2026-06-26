@@ -2,7 +2,8 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { Heart, Mail, Phone, MapPin, Check } from 'lucide-react'
+import Image from 'next/image'
+import { Mail, Phone, MapPin, Check } from 'lucide-react'
 import {
   InstagramIcon,
   FacebookIcon,
@@ -55,14 +56,14 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Link
-              href="/"
-              className="flex items-center gap-2.5 font-heading text-xl font-extrabold"
-            >
-              <span className="flex size-10 items-center justify-center rounded-xl bg-accent text-accent-foreground">
-                <Heart className="size-5" fill="currentColor" />
-              </span>
-              XM Charity Foundation
+            <Link href="/" className="inline-block">
+              <Image
+                src="/logo-transparent.png"
+                alt="XM Charity Foundation"
+                width={160}
+                height={45}
+                className="h-10 w-auto"
+              />
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-sidebar-foreground/70">
               Transforming lives and building hope through compassion, outreach,
