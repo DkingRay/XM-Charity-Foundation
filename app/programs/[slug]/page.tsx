@@ -159,16 +159,9 @@ export default async function ProgramDetailPage({ params }: Props) {
               Support the {program.title} Program
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-pretty text-lg text-muted-foreground">
-              Your donation helps us expand this program and reach more communities
-              in need.
+              Follow our work, spread the word, and help us inspire more communities across Nigeria.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                <Link href="/donate">
-                  <Heart className="size-5" fill="currentColor" />
-                  Donate Now
-                </Link>
-              </Button>
               <Button asChild size="lg" variant="outline">
                 <Link href="/get-involved">
                   Get Involved

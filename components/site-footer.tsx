@@ -7,7 +7,7 @@ import {
   InstagramIcon,
   FacebookIcon,
   TwitterIcon,
-  YoutubeIcon,
+  TiktokIcon,
 } from '@/components/brand-icons'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -24,8 +24,8 @@ const programLinks = [
 const socials = [
   { label: 'Instagram', href: CONTACT.socials.instagram, icon: InstagramIcon },
   { label: 'Facebook', href: CONTACT.socials.facebook, icon: FacebookIcon },
-  { label: 'Twitter', href: CONTACT.socials.twitter, icon: TwitterIcon },
-  { label: 'YouTube', href: CONTACT.socials.youtube, icon: YoutubeIcon },
+  { label: 'Twitter / X', href: CONTACT.socials.twitter, icon: TwitterIcon },
+  { label: 'TikTok', href: CONTACT.socials.tiktok, icon: TiktokIcon },
 ]
 
 export function SiteFooter() {

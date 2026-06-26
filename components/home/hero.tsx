@@ -70,12 +70,11 @@ export function Hero() {
           </div>
 
           <h1 className="mt-6 text-balance font-heading text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-7xl">
-            Transforming Lives. Building Hope. Creating Lasting Impact.
+            Building Bridges and Changing Lives.
           </h1>
 
           <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-white/85 lg:text-xl">
-            Empowering communities through compassion, outreach, healthcare,
-            education, and sustainable development.
+            A self-funded Nigerian non-profit empowering marginalized communities through education, school renovations, healthcare, and outreach.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -86,7 +85,7 @@ export function Hero() {
             >
               <Link href="/donate">
                 <Heart className="size-5" fill="currentColor" />
-                Donate Now
+                Support Our Mission
               </Link>
             </Button>
             <Button

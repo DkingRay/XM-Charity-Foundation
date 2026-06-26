@@ -9,6 +9,8 @@ import {
   Scale,
   Award,
   Leaf,
+  Building,
+  BookOpen,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
@@ -17,6 +19,7 @@ export const NAV_LINKS = [
   { label: 'About', href: '/about' },
   { label: 'Programs', href: '/programs' },
   { label: 'Impact', href: '/impact' },
+  { label: 'Support', href: '/donate' },
   { label: 'Media', href: '/media' },
   { label: 'Events', href: '/events' },
   { label: 'Get Involved', href: '/get-involved' },
@@ -24,33 +27,35 @@ export const NAV_LINKS = [
 ]
 
 export const CONTACT = {
-  email: 'hello@xmcharityfoundation.org',
+  email: 'info@xmcharityfoundation.org',
   phone: '+234 800 000 0000',
   whatsapp: '2348000000000',
-  address: 'Plot 12, Hope Avenue, Lagos, Nigeria',
+  address: 'Suite A6, Third Floor, Real Tower Plaza, A.E. Ekukinam Street, Utako, Abuja, Nigeria',
   socials: {
     instagram: 'https://www.instagram.com/xm_charity_foundation/',
-    facebook: 'https://www.facebook.com/',
-    twitter: 'https://twitter.com/',
-    youtube: 'https://youtube.com/',
+    facebook: 'https://www.facebook.com/OfficialAhmedXM',
+    twitter: 'https://x.com/ahmedxm01',
+    tiktok: 'https://www.tiktok.com/@ahmed_xm_',
   },
 }
 
+const IMG = (filename: string) => `/images/${filename}`
+
 export const HERO_SLIDES = [
   {
-    image: '/images/hero-1.png',
-    alt: 'Volunteers distributing food supplies to families at a community outreach',
-    tag: 'Community Outreach',
+    image: IMG('727588697_122286498308018099_2441904961173424883_n.jpg'),
+    alt: 'School renovation project — newly rebuilt classroom blocks at a school in Bauchi',
+    tag: 'School Renovation',
   },
   {
-    image: '/images/hero-2.png',
-    alt: 'A nurse providing care to a child during a medical mission',
-    tag: 'Medical Missions',
-  },
-  {
-    image: '/images/hero-3.png',
-    alt: 'Schoolchildren smiling with new books and learning materials',
+    image: IMG('727550799_122286498254018099_2205527912629372701_n.jpg'),
+    alt: 'Students receiving new learning materials and school supplies from the foundation',
     tag: 'Education Support',
+  },
+  {
+    image: IMG('727288228_122286498302018099_1619861257588860858_n.jpg'),
+    alt: 'Community outreach — foundation team with community members during a visit',
+    tag: 'Community Outreach',
   },
 ]
 
@@ -61,10 +66,10 @@ export type Stat = {
 }
 
 export const IMPACT_STATS: Stat[] = [
-  { value: 48000, suffix: '+', label: 'Beneficiaries Reached' },
-  { value: 120, suffix: '+', label: 'Communities Served' },
-  { value: 260, suffix: '+', label: 'Outreach Programs' },
-  { value: 3500, suffix: '+', label: 'Volunteers Mobilized' },
+  { value: 50000, suffix: '+', label: 'Lives Impacted' },
+  { value: 50, suffix: '', label: 'Schools Renovated (Goal 2026)' },
+  { value: 25, suffix: '+', label: 'Communities Served' },
+  { value: 15, suffix: '+', label: 'School Projects Completed' },
 ]
 
 export type Program = {
@@ -81,107 +86,107 @@ export type Program = {
 export const PROGRAMS: Program[] = [
   {
     slug: 'education',
-    title: 'Education',
-    icon: GraduationCap,
-    image: '/images/program-education.png',
+    title: 'School Renovation',
+    icon: Building,
+    image: IMG('727588697_122286498308018099_2441904961173424883_n.jpg'),
     summary:
-      'Scholarships, learning materials, and school infrastructure that keep children in classrooms.',
+      'Rebuilding and renovating public schools across Nigeria — restoring classrooms, toilets, and providing furniture and learning materials.',
     description:
-      'We believe education is the surest path out of poverty. Our education program provides scholarships, school supplies, and learning environments that give every child a fair start.',
+      'Our flagship program focuses on renovating dilapidated public schools across Northern Nigeria and beyond. We rebuild classroom blocks, restore toilet facilities, provide new desks and chairs, and distribute learning materials. Every child deserves a safe place to learn and dream, and we refuse to look away.',
     metrics: [
-      { value: '12,000+', label: 'Students supported' },
-      { value: '40', label: 'Schools partnered' },
-      { value: '850', label: 'Scholarships awarded' },
+      { value: '15+', label: 'Schools renovated' },
+      { value: '50', label: 'Goal for 2026' },
+      { value: '8,000+', label: 'Students impacted' },
     ],
     objectives: [
-      'Provide scholarships to underprivileged students',
-      'Distribute books, uniforms, and learning materials',
-      'Renovate classrooms and improve school facilities',
-      'Train and support local teachers',
+      'Renovate dilapidated classroom blocks in public schools',
+      'Provide new desks, chairs, and learning materials',
+      'Restore toilet and sanitation facilities',
+      'Create safe, dignified learning environments for children',
     ],
   },
   {
     slug: 'healthcare',
     title: 'Healthcare',
     icon: Stethoscope,
-    image: '/images/program-healthcare.png',
+    image: IMG('725641030_122286111038018099_2129789106909836960_n.jpg'),
     summary:
-      'Free medical missions, screenings, and essential treatment for underserved communities.',
+      'Free medical missions and health outreaches bringing essential care to underserved communities. Expanding into healthcare in 2027.',
     description:
-      'Through free medical missions and health camps, we bring quality healthcare to communities that need it most, focusing on prevention, treatment, and health education.',
+      'Through free medical missions, health screenings, and treatment outreaches, we bring quality healthcare to communities with limited access to medical services. In 2027, Insha Allah, we will expand our impact into the healthcare sector with a broader, sustained healthcare program.',
     metrics: [
-      { value: '18,500', label: 'Patients treated' },
-      { value: '95', label: 'Medical missions' },
-      { value: '30', label: 'Partner clinics' },
+      { value: '5,000+', label: 'Patients treated' },
+      { value: '10+', label: 'Medical outreaches' },
+      { value: '2027', label: 'Full healthcare launch' },
     ],
     objectives: [
-      'Run free medical and surgical missions',
-      'Provide screenings for common illnesses',
-      'Distribute essential medication and supplies',
-      'Promote community health awareness',
+      'Organize free medical missions in underserved communities',
+      'Provide health screenings and essential treatment',
+      'Distribute medications and health supplies',
+      'Expand into a dedicated healthcare program in 2027',
     ],
   },
   {
     slug: 'community-outreach',
     title: 'Community Outreach',
     icon: Users,
-    image: '/images/program-outreach.png',
+    image: IMG('723197065_122285177018018099_7750306090125267792_n.jpg'),
     summary:
-      'On-the-ground relief, food distribution, and support reaching families where they live.',
+      'On-the-ground relief, food distribution, and direct support reaching families and communities across Northern Nigeria.',
     description:
-      'Our outreach teams meet communities where they are, distributing relief packages, food, and essentials while building lasting relationships rooted in dignity.',
+      'Our outreach teams go directly into communities to distribute food packages, relief materials, and essential supplies. Every outreach is an opportunity to build relationships rooted in dignity, compassion, and service. A small token can create a meaningful impact.',
     metrics: [
-      { value: '25,000', label: 'Relief packages' },
-      { value: '120', label: 'Communities reached' },
-      { value: '260', label: 'Outreach events' },
+      { value: '10,000+', label: 'Relief packages' },
+      { value: '25+', label: 'Communities reached' },
+      { value: '50+', label: 'Outreach events' },
     ],
     objectives: [
-      'Distribute food and relief materials',
-      'Respond rapidly to community needs',
-      'Build trusted local partnerships',
-      'Support vulnerable families with essentials',
+      'Distribute food and essential relief materials',
+      'Reach vulnerable families in underserved areas',
+      'Build trusted relationships with local communities',
+      'Respond quickly to emerging community needs',
     ],
   },
   {
     slug: 'humanitarian-support',
     title: 'Humanitarian Support',
     icon: HandHeart,
-    image: '/images/program-humanitarian.png',
+    image: IMG('719969387_122284752398018099_9149896095269479543_n.jpg'),
     summary:
-      'Clean water, shelter, and emergency response for communities in crisis.',
+      'Emergency relief, water projects, and infrastructure support for communities in times of need.',
     description:
-      'When disaster strikes, we move quickly to provide clean water, shelter, and emergency aid, restoring stability and hope to families affected by crisis.',
+      'When communities face hardship, we provide emergency relief including food, water, shelter, and essential supplies. We also invest in sustainable infrastructure like water projects that serve communities long after our initial response.',
     metrics: [
-      { value: '60', label: 'Water projects' },
-      { value: '8,000', label: 'Families aided' },
-      { value: '15', label: 'Emergency responses' },
+      { value: '3,000+', label: 'Families aided' },
+      { value: '8', label: 'Water projects' },
+      { value: '12', label: 'Emergency responses' },
     ],
     objectives: [
-      'Provide clean water and sanitation',
-      'Deliver emergency shelter and supplies',
-      'Support displaced and vulnerable families',
+      'Provide emergency food and relief supplies',
+      'Support clean water and sanitation access',
+      'Assist displaced and vulnerable families',
       'Build long-term community resilience',
     ],
   },
   {
     slug: 'youth-empowerment',
-    title: 'Youth Empowerment',
-    icon: Sprout,
-    image: '/images/program-youth.png',
+    title: 'Youth & Education',
+    icon: GraduationCap,
+    image: IMG('723109644_122285176976018099_4112867470274838597_n.jpg'),
     summary:
-      'Skills training, mentorship, and entrepreneurship for the next generation.',
+      'Scholarships, student financial support, and integration of modern skills like finance and technology into education.',
     description:
-      'We equip young people with practical skills, mentorship, and seed support so they can build sustainable livelihoods and lead change in their communities.',
+      'We invest in the next generation through student financial support, scholarships, and partnerships with university student unions. Modern education concepts like finance and technology are integrated into learning materials, preparing young Nigerians for the future.',
     metrics: [
-      { value: '4,200', label: 'Youth trained' },
-      { value: '35', label: 'Training programs' },
-      { value: '600', label: 'Businesses started' },
+      { value: '500+', label: 'Students supported' },
+      { value: '5', label: 'University partnerships' },
+      { value: '1,000+', label: 'Learning materials' },
     ],
     objectives: [
-      'Deliver vocational and digital skills training',
-      'Provide mentorship and career guidance',
-      'Support youth-led entrepreneurship',
-      'Create pathways to employment',
+      'Provide financial support to students in need',
+      'Partner with university student unions',
+      'Integrate finance and technology into learning',
+      'Support youth leadership and development',
     ],
   },
 ]
@@ -191,66 +196,66 @@ export type Value = { title: string; description: string; icon: LucideIcon }
 export const CORE_VALUES: Value[] = [
   {
     title: 'Compassion',
-    description: 'We lead with empathy, meeting people with dignity and care.',
+    description: 'We lead with empathy, meeting every person with dignity, care, and respect.',
     icon: HeartHandshake,
   },
   {
     title: 'Integrity',
-    description: 'We do what is right, honestly and consistently.',
+    description: 'We operate with full transparency and accountability in all we do.',
     icon: ShieldCheck,
   },
   {
-    title: 'Accountability',
-    description: 'We are transparent with every donation and outcome.',
-    icon: Scale,
-  },
-  {
     title: 'Service',
-    description: 'We put communities first in everything we do.',
+    description: 'We put communities first in every decision and action we take.',
     icon: HandHeart,
   },
   {
+    title: 'Faith',
+    description: 'Driven by gratitude and a sense of moral duty to give back in our own little way.',
+    icon: HeartHandshake,
+  },
+  {
     title: 'Excellence',
-    description: 'We pursue the highest standards in our work and impact.',
+    description: 'We pursue the highest standards in our work, from renovation quality to community engagement.',
     icon: Award,
   },
   {
     title: 'Sustainability',
-    description: 'We build solutions that last well beyond our presence.',
+    description: 'We build solutions that create lasting change, not temporary fixes.',
     icon: Leaf,
   },
 ]
 
 export const TIMELINE = [
   {
-    year: '2016',
-    title: 'A Foundation is Born',
+    year: '2017',
+    title: 'Founder Begins His Journey',
     description:
-      'XM Charity Foundation is established with a small team of volunteers and a big mission to serve the most vulnerable.',
+      'Ahmed Yusuf Saifullah, born in Bauchi State, begins his rise as a financial market analyst and cryptocurrency trader, founding what would become XM Trading Academy.',
   },
   {
-    year: '2018',
-    title: 'First Medical Mission',
+    year: '2024 – 2025',
+    title: 'Foundation Established',
     description:
-      'We launched our first free medical mission, treating over 2,000 patients in underserved communities.',
+      'The XM Charity Foundation is launched — a self-funded initiative with a mission to renovate schools and support communities across Nigeria without external or government funding.',
   },
   {
-    year: '2020',
-    title: 'Crisis Response',
+    year: '2025',
+    title: 'First School Renovations',
     description:
-      'Mobilized emergency relief during a season of crisis, reaching thousands of families with food and essentials.',
+      'The foundation begins renovating dilapidated schools in Bauchi metropolis, restoring classroom blocks, toilets, and providing furniture. The mission to renovate 50 schools is announced.',
   },
   {
-    year: '2022',
-    title: 'Education for All',
+    year: 'June 2026',
+    title: 'Major Commissioning',
     description:
-      'Awarded our 500th scholarship and renovated dozens of classrooms across partner schools.',
+      'Four blocks (eight classrooms) successfully commissioned in Bauchi metropolis. Multiple school renovations completed and shared across social media, inspiring thousands.',
   },
   {
-    year: '2024',
-    title: 'Scaling Impact',
+    year: '2026 – 2027',
+    title: '50-School Goal & Healthcare Expansion',
     description:
-      'Expanded to 120 communities with sustainable water, health, and youth empowerment programs.',
+      'The foundation aims to complete 50 school renovations in 2026 and announces plans to expand into the healthcare sector in 2027.',
   },
 ]
 
@@ -263,59 +268,81 @@ export type Story = {
 
 export const STORIES: Story[] = [
   {
-    name: 'Amara O.',
-    role: 'Scholarship Beneficiary',
-    image: '/images/story-1.png',
+    name: 'Aisha M.',
+    role: 'Student, Bauchi',
+    image: IMG('723109644_122285176976018099_4112867470274838597_n.jpg'),
     quote:
-      'The foundation paid my school fees when my family had nothing. Today I am the first in my family to attend university.',
+      'Our school was falling apart. The foundation rebuilt our classrooms and gave us new desks. Now we are proud to come to school every day. May Allah bless them.',
   },
   {
-    name: 'Daniel K.',
-    role: 'Volunteer',
-    image: '/images/story-2.png',
+    name: 'Ibrahim S.',
+    role: 'Teacher, Bauchi State',
+    image: IMG('720226698_122284752314018099_1040437894573776917_n.jpg'),
     quote:
-      'Volunteering changed how I see my community. Every outreach reminds me that small acts of kindness create real change.',
+      'For years we taught in crumbling classrooms. The foundation restored our school and our hope. This is more than a renovation — it is an investment in the future of our children.',
   },
   {
-    name: 'Mama Ngozi',
-    role: 'Community Member',
-    image: '/images/story-3.png',
+    name: 'Community Elder',
+    role: 'Community Leader, Bauchi',
+    image: IMG('719506394_122284752464018099_5562625399107309443_n.jpg'),
     quote:
-      'The medical mission saved my grandchild. We are forever grateful for the care and compassion we received.',
+      'We are grateful for this blessing. Without external or government funding, they came and made a difference. A small token, a meaningful impact.',
   },
 ]
 
 export type MediaItem = {
   id: number
   image: string
-  category: 'Outreach' | 'Medical Missions' | 'Education' | 'Events' | 'Humanitarian Aid'
+  category: 'School Renovation' | 'Education' | 'Outreach' | 'Medical Missions' | 'Events'
   type: 'photo' | 'video' | 'reel'
   title: string
   span?: 'tall' | 'wide'
 }
 
+const ALL_IMAGES = [
+  '727588697_122286498308018099_2441904961173424883_n.jpg',
+  '727550799_122286498254018099_2205527912629372701_n.jpg',
+  '727288228_122286498302018099_1619861257588860858_n.jpg',
+  '725641030_122286111038018099_2129789106909836960_n.jpg',
+  '724818017_122285697002018099_8405143684719318262_n.jpg',
+  '723197065_122285177018018099_7750306090125267792_n.jpg',
+  '723109644_122285176976018099_4112867470274838597_n.jpg',
+  '720282373_122285411132018099_6453543109505619715_n.jpg',
+  '720226698_122284752314018099_1040437894573776917_n.jpg',
+  '719969387_122284752398018099_9149896095269479543_n.jpg',
+  '719556490_122284850090018099_4914428958774086704_n.jpg',
+  '719506394_122284752464018099_5562625399107309443_n.jpg',
+  '719426349_122285235404018099_6166799000959899654_n.jpg',
+  '719203030_122284849718018099_3497546787518534834_n.jpg',
+  '717596072_122284752194018099_8612082434875538740_n.jpg',
+  '717286733_122284752176018099_7271539336851618725_n.jpg',
+  '716230133_122284575332018099_7820708418825074856_n.jpg',
+  '711368979_122284226318018099_8953911967068775381_n.jpg',
+  '700074606_122282215760018099_3527457504966491796_n.jpg',
+]
+
 export const MEDIA_ITEMS: MediaItem[] = [
-  { id: 1, image: '/images/media-1.png', category: 'Outreach', type: 'photo', title: 'Food distribution drive', span: 'wide' },
-  { id: 2, image: '/images/media-2.png', category: 'Education', type: 'photo', title: 'Back-to-school supplies', span: 'tall' },
-  { id: 3, image: '/images/media-3.png', category: 'Medical Missions', type: 'video', title: 'Health awareness gathering' },
-  { id: 4, image: '/images/media-4.png', category: 'Humanitarian Aid', type: 'reel', title: 'Community garden project', span: 'tall' },
-  { id: 5, image: '/images/media-5.png', category: 'Events', type: 'photo', title: 'Annual fundraising gala', span: 'wide' },
-  { id: 6, image: '/images/media-6.png', category: 'Humanitarian Aid', type: 'photo', title: 'Clean water project' },
-  { id: 7, image: '/images/program-education.png', category: 'Education', type: 'photo', title: 'Classroom learning' },
-  { id: 8, image: '/images/program-healthcare.png', category: 'Medical Missions', type: 'video', title: 'Free medical checkup' },
-  { id: 9, image: '/images/program-youth.png', category: 'Education', type: 'reel', title: 'Youth skills workshop', span: 'tall' },
-  { id: 10, image: '/images/program-outreach.png', category: 'Outreach', type: 'photo', title: 'Relief package handout', span: 'wide' },
-  { id: 11, image: '/images/program-humanitarian.png', category: 'Humanitarian Aid', type: 'photo', title: 'Water container delivery' },
-  { id: 12, image: '/images/donate-cta.png', category: 'Events', type: 'video', title: 'Community celebration' },
+  { id: 1, image: IMG(ALL_IMAGES[0]), category: 'School Renovation', type: 'photo', title: 'Newly renovated classroom blocks in Bauchi', span: 'wide' },
+  { id: 2, image: IMG(ALL_IMAGES[1]), category: 'Education', type: 'photo', title: 'Students receiving learning materials', span: 'tall' },
+  { id: 3, image: IMG(ALL_IMAGES[2]), category: 'Outreach', type: 'photo', title: 'Foundation team during community outreach' },
+  { id: 4, image: IMG(ALL_IMAGES[3]), category: 'Medical Missions', type: 'photo', title: 'Medical outreach team in action', span: 'tall' },
+  { id: 5, image: IMG(ALL_IMAGES[4]), category: 'School Renovation', type: 'photo', title: 'School renovation project — before and after', span: 'wide' },
+  { id: 6, image: IMG(ALL_IMAGES[5]), category: 'Outreach', type: 'photo', title: 'Food distribution to families in need' },
+  { id: 7, image: IMG(ALL_IMAGES[6]), category: 'Education', type: 'photo', title: 'Children with new school supplies' },
+  { id: 8, image: IMG(ALL_IMAGES[7]), category: 'Events', type: 'photo', title: 'Commissioning ceremony for renovated school' },
+  { id: 9, image: IMG(ALL_IMAGES[8]), category: 'School Renovation', type: 'photo', title: 'Renovated classroom interior', span: 'tall' },
+  { id: 10, image: IMG(ALL_IMAGES[9]), category: 'Outreach', type: 'photo', title: 'Community gathering during outreach program', span: 'wide' },
+  { id: 11, image: IMG(ALL_IMAGES[10]), category: 'Education', type: 'photo', title: 'Students in their newly furnished classroom' },
+  { id: 12, image: IMG(ALL_IMAGES[11]), category: 'School Renovation', type: 'photo', title: 'Foundation members at school project site' },
 ]
 
 export const MEDIA_CATEGORIES = [
   'All',
+  'School Renovation',
   'Outreach',
-  'Medical Missions',
   'Education',
+  'Medical Missions',
   'Events',
-  'Humanitarian Aid',
 ] as const
 
 export type EventItem = {
@@ -333,74 +360,74 @@ export type EventItem = {
 export const EVENTS: EventItem[] = [
   {
     id: 1,
-    title: 'Annual Medical Mission 2026',
-    date: 'August 15, 2026',
-    isoDate: '2026-08-15T09:00:00',
-    location: 'Ikorodu, Lagos',
-    image: '/images/program-healthcare.png',
-    category: 'Medical Missions',
+    title: 'School Renovation Commissioning — Bauchi',
+    date: 'June 25, 2026',
+    isoDate: '2026-06-25T10:00:00',
+    location: 'Bauchi Metropolis, Bauchi State',
+    image: IMG(ALL_IMAGES[0]),
+    category: 'School Renovation',
     description:
-      'A three-day free medical mission offering screenings, treatment, and essential medication to underserved families.',
+      'Commissioning of four blocks (eight classrooms) after successful renovation. A milestone in our 50-school mission.',
     status: 'upcoming',
   },
   {
     id: 2,
-    title: 'Back-to-School Outreach',
-    date: 'September 5, 2026',
-    isoDate: '2026-09-05T10:00:00',
-    location: 'Abeokuta, Ogun',
-    image: '/images/media-2.png',
+    title: 'Back-to-School Supplies Distribution',
+    date: 'September 2026',
+    isoDate: '2026-09-01T09:00:00',
+    location: 'Bauchi State',
+    image: IMG(ALL_IMAGES[1]),
     category: 'Education',
     description:
-      'Distributing school bags, books, and uniforms to 1,000 students ahead of the new academic year.',
+      'Distributing school bags, books, uniforms, and learning materials to students ahead of the new academic year.',
     status: 'upcoming',
   },
   {
     id: 3,
-    title: 'Hope Gala & Fundraiser',
-    date: 'October 20, 2026',
-    isoDate: '2026-10-20T18:00:00',
-    location: 'Victoria Island, Lagos',
-    image: '/images/media-5.png',
-    category: 'Events',
+    title: '50-School Mission — Next Renovation Phase',
+    date: 'August 2026',
+    isoDate: '2026-08-01T09:00:00',
+    location: 'Northern Nigeria',
+    image: IMG(ALL_IMAGES[4]),
+    category: 'School Renovation',
     description:
-      'An evening of celebration and giving to fund our 2027 community development programs.',
+      'Continuing our ongoing mission to renovate 50 schools across Nigeria. Next phase targets additional schools in Bauchi and neighboring states.',
     status: 'upcoming',
   },
   {
     id: 4,
-    title: 'Clean Water Project Launch',
-    date: 'March 22, 2026',
-    isoDate: '2026-03-22T09:00:00',
-    location: 'Epe, Lagos',
-    image: '/images/media-6.png',
-    category: 'Humanitarian Aid',
+    title: 'Two Schools Renovated in Northern Nigeria',
+    date: 'June 9, 2026',
+    isoDate: '2026-06-09T10:00:00',
+    location: 'Northern Nigeria',
+    image: IMG(ALL_IMAGES[5]),
+    category: 'School Renovation',
     description:
-      'Commissioned a new borehole serving over 3,000 residents with safe, clean drinking water.',
+      'Successfully renovated two schools — restored 4 blocks of classrooms, toilets, and provided new chairs and books.',
     status: 'past',
   },
   {
     id: 5,
-    title: 'Youth Empowerment Summit',
-    date: 'February 10, 2026',
-    isoDate: '2026-02-10T09:00:00',
-    location: 'Ibadan, Oyo',
-    image: '/images/program-youth.png',
-    category: 'Youth',
+    title: 'Community Food Distribution',
+    date: 'May 2026',
+    isoDate: '2026-05-15T10:00:00',
+    location: 'Bauchi State',
+    image: IMG(ALL_IMAGES[6]),
+    category: 'Outreach',
     description:
-      'A skills and mentorship summit equipping 500 young people for sustainable livelihoods.',
+      'Food and relief package distribution to families in underserved communities across Bauchi.',
     status: 'past',
   },
   {
     id: 6,
-    title: 'Festive Food Drive',
-    date: 'December 18, 2025',
-    isoDate: '2025-12-18T10:00:00',
-    location: 'Surulere, Lagos',
-    image: '/images/media-1.png',
-    category: 'Outreach',
+    title: 'Bauchi School Renovation — Phase 1 Complete',
+    date: 'May 2026',
+    isoDate: '2026-05-01T10:00:00',
+    location: 'Bauchi Metropolis, Bauchi State',
+    image: IMG(ALL_IMAGES[8]),
+    category: 'School Renovation',
     description:
-      'Distributed festive food packages to 2,500 families during the holiday season.',
+      'Completed renovation of classroom blocks in Bauchi metropolis, restoring safe learning environments for hundreds of children.',
     status: 'past',
   },
 ]

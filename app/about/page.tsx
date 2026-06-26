@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Target, Eye, ArrowRight } from 'lucide-react'
+import { Target, Eye, ArrowRight, Quote } from 'lucide-react'
 import { PageHero } from '@/components/page-hero'
 import { Reveal } from '@/components/reveal'
 import { Button } from '@/components/ui/button'
@@ -10,7 +10,7 @@ import { CORE_VALUES, TIMELINE } from '@/lib/site-data'
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Learn about XM Charity Foundation — our mission, vision, core values, and the journey of compassion that drives our work across communities.',
+    'Learn about XM Charity Foundation — our mission, founder Ahmed Yusuf Saifullah (Ahmed XM), and the journey of compassion driving our work across Nigeria.',
 }
 
 export default function AboutPage() {
@@ -18,18 +18,18 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="Who We Are"
-        title="Compassion in action, transparency at heart"
-        description="XM Charity Foundation exists to uplift the most vulnerable through sustainable programs rooted in dignity, service, and measurable impact."
+        title="Building Bridges and Changing Lives"
+        description="A Nigerian non-profit foundation dedicated to empowering marginalized communities through education, healthcare, and economic opportunities."
       />
 
-      {/* Intro */}
+      {/* Founder Section */}
       <section className="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
           <Reveal>
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
               <Image
-                src="/images/about-team.png"
-                alt="The XM Charity Foundation team of volunteers"
+                src="/images/727288228_122286498302018099_1619861257588860858_n.jpg"
+                alt="Ahmed Yusuf Saifullah (Ahmed XM) — Founder of XM Charity Foundation"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
@@ -38,22 +38,23 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-              Our Story
+              Founder & Chairman
             </p>
             <h2 className="mt-3 text-balance font-heading text-3xl font-extrabold tracking-tight sm:text-4xl">
-              Driven by people, powered by purpose
+              Ahmed Yusuf Saifullah
             </h2>
+            <p className="mt-1 font-heading text-lg font-medium text-primary">
+              Also known as Ahmed XM
+            </p>
             <div className="mt-5 space-y-4 text-pretty leading-relaxed text-muted-foreground">
               <p>
-                What began as a small group of volunteers has grown into a
-                movement reaching over 120 communities. We believe that lasting
-                change happens when compassion meets accountability.
+                Ahmed Yusuf Saifullah is a Nigerian financial market analyst, cryptocurrency trader, and philanthropist. Born July 7, 1997, in Bauchi State, he rose from humble beginnings to become one of Africa&apos;s most influential traders, founding XM Trading Academy.
               </p>
               <p>
-                Every program we run — from education and healthcare to
-                humanitarian relief and youth empowerment — is designed to
-                restore dignity and create opportunities that outlast our
-                presence.
+                Driven by a deep sense of moral duty and gratitude, Ahmed established the XM Charity Foundation as a self-funded initiative — operating entirely without external or government funding. His mission: to renovate 50 schools across Nigeria in 2026 and expand into healthcare in 2027.
+              </p>
+              <p>
+                &ldquo;A small token, a meaningful impact.&rdquo; This philosophy guides everything the foundation does, from rebuilding classroom blocks to distributing learning materials and supporting communities.
               </p>
             </div>
             <Button asChild className="mt-8">
@@ -66,19 +67,30 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Quote */}
+      <section className="bg-muted px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+        <Reveal className="mx-auto max-w-3xl text-center">
+          <Quote className="mx-auto size-10 text-primary/40" />
+          <blockquote className="mt-6 text-balance text-2xl font-heading font-bold leading-snug tracking-tight sm:text-3xl">
+            &ldquo;Every child deserves a safe place to learn and dream. We refuse to look away. If we all abandon these schools, then we abandon the next generation.&rdquo;
+          </blockquote>
+          <p className="mt-4 font-medium text-muted-foreground">— Ahmed Yusuf Saifullah</p>
+        </Reveal>
+      </section>
+
       {/* Mission & Vision */}
-      <section className="bg-muted px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <section className="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2">
           {[
             {
               icon: Target,
               title: 'Our Mission',
-              text: 'To empower vulnerable communities through sustainable programs in education, healthcare, and humanitarian support — delivered with compassion and full accountability.',
+              text: 'To empower vulnerable communities across Nigeria through sustainable programs in education, healthcare, and humanitarian support — delivered with compassion, integrity, and full accountability.',
             },
             {
               icon: Eye,
               title: 'Our Vision',
-              text: 'A world where every person, regardless of circumstance, has access to the opportunities and care they need to thrive and build a dignified future.',
+              text: 'A Nigeria where every child has access to quality education, every community has access to healthcare, and every person has the opportunity to build a dignified future.',
             },
           ].map((item, i) => (
             <Reveal key={item.title} delay={i * 0.1}>
@@ -99,7 +111,7 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section className="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <section className="bg-muted px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <Reveal className="mx-auto max-w-2xl text-center">
             <p className="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-primary">

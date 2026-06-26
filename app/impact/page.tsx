@@ -173,19 +173,18 @@ export default function ImpactPage() {
         <div className="mx-auto max-w-4xl text-center">
           <Reveal>
             <h2 className="text-balance font-heading text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-              Help us reach more communities
+              Join us in building a better Nigeria
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-pretty text-lg text-muted-foreground">
-              Your support makes this impact possible. Join us in transforming
-              more lives across Nigeria.
+              Follow our journey, volunteer your time, or partner with us to amplify our impact across more communities.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                <Link href="/donate">Donate Now</Link>
+                <Link href="/get-involved">Get Involved</Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="/get-involved">
-                  Get Involved
+                <Link href="/programs">
+                  View Programs
                   <ArrowRight className="size-4" />
                 </Link>
               </Button>

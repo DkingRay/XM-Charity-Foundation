@@ -13,15 +13,15 @@ import {
   InstagramIcon,
   FacebookIcon,
   TwitterIcon,
-  YoutubeIcon,
+  TiktokIcon,
   WhatsappIcon,
 } from '@/components/brand-icons'
 
 const SOCIALS = [
   { label: 'Instagram', href: CONTACT.socials.instagram, icon: InstagramIcon },
   { label: 'Facebook', href: CONTACT.socials.facebook, icon: FacebookIcon },
-  { label: 'Twitter', href: CONTACT.socials.twitter, icon: TwitterIcon },
-  { label: 'YouTube', href: CONTACT.socials.youtube, icon: YoutubeIcon },
+  { label: 'Twitter / X', href: CONTACT.socials.twitter, icon: TwitterIcon },
+  { label: 'TikTok', href: CONTACT.socials.tiktok, icon: TiktokIcon },
 ]
 
 export default function ContactPage() {
