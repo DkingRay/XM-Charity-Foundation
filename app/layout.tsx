@@ -4,6 +4,7 @@ import { Geist, Geist_Mono, Sora } from 'next/font/google'
 import './globals.css'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
+import { LayoutGuard } from '@/components/layout-guard'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
 const geistMono = Geist_Mono({
@@ -67,9 +68,9 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${sora.variable} bg-background`}
     >
       <body className="font-sans antialiased">
-        <SiteHeader />
+        <LayoutGuard><SiteHeader /></LayoutGuard>
         <main>{children}</main>
-        <SiteFooter />
+        <LayoutGuard><SiteFooter /></LayoutGuard>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

@@ -63,3 +63,40 @@ model Partner {
   message     String   @default("")
   createdAt   DateTime @default(now())
 }
+
+model Program {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  image       String   @default("/images/placeholder.svg")
+  summary     String
+  description String
+  metrics     Json     @default("[]")
+  objectives  String[] @default([])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model MediaItem {
+  id        String   @id @default(cuid())
+  image     String
+  category  String
+  type      String   @default("photo")
+  title     String
+  span      String?
+  createdAt DateTime @default(now())
+}
+
+model Event {
+  id          String   @id @default(cuid())
+  title       String
+  date        String
+  isoDate     String
+  location    String
+  image       String   @default("/images/placeholder.svg")
+  category    String   @default("Events")
+  description String
+  status      String   @default("upcoming")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

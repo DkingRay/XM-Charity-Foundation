@@ -4,9 +4,12 @@ import { prisma } from '@/lib/prisma'
 export const dynamic = 'force-dynamic'
 
 export async function GET() {
-  const [donations, subscribers] = await Promise.all([
+  const [donations, subscribers, programCount, eventCount, mediaCount] = await Promise.all([
     prisma.donation.findMany(),
     prisma.subscriber.count(),
+    prisma.program.count(),
+    prisma.event.count(),
+    prisma.mediaItem.count(),
   ])
 
   const totalDonations = donations.reduce((sum, d) => sum + d.amount, 0)
@@ -27,5 +30,8 @@ export async function GET() {
     donationCount: donations.length,
     subscriberCount: subscribers,
     monthlyDonationCount: monthlyDonations.length,
+    programCount,
+    eventCount,
+    mediaCount,
   })
 }
