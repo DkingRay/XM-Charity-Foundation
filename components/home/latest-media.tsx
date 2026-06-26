@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react'
 import { InstagramIcon } from '@/components/brand-icons'
 import { Reveal } from '@/components/reveal'
 import { Button } from '@/components/ui/button'
-import { MediaGallery } from '@/components/media-gallery'
+import { MediaScroll } from '@/components/media-scroll'
 import { MEDIA_ITEMS } from '@/lib/site-data'
 
 export function LatestMedia() {
@@ -33,7 +33,7 @@ export function LatestMedia() {
         </Reveal>
 
         <div className="mt-12">
-          <MediaGallery items={MEDIA_ITEMS.slice(0, 9)} />
+          <MediaScroll items={MEDIA_ITEMS} />
         </div>
       </div>
     </section>
